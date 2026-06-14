@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HTML */
+html {
+  scroll-behavior: smooth;
+}
+
+/* BODY */
+body {
+
+  background: #050505;
+
+  color: white;
+
+  overflow-x: hidden;
+
+  min-height: 100vh;
+
+  font-family: 'Inter', sans-serif;
+
+  letter-spacing: -0.01em;
+}
+body::before {
+
+  content: '';
+
+  position: fixed;
+
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255,122,0,0.015),
+      transparent 35%
+    );
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+/* HEADINGS */
+h1,
+h2,
+h3,
+h4,
+.heading {
+
+  font-family: 'Space Grotesk', sans-serif;
+
+  letter-spacing: -0.04em;
+}
+
+/* GLASS */
+.glass {
+
+  background: rgba(15,15,15,0.92);
+
+  backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255,255,255,0.05);
+
+  transition: all 0.3s ease;
+}
+
+/* CARD */
+.card {
+
+  background: #101010;
+
+  border: 1px solid rgba(255,255,255,0.05);
+
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+
+  transform: translateY(-3px);
+
+  border-color: rgba(255,122,0,0.18);
+}
+
+/* BUTTON */
+.primary-btn {
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff6b00,
+      #ff8c1a
+    );
+
+  color: white;
+
+  transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+
+  transform: translateY(-2px);
+
+  opacity: 0.95;
+}
+
+/* TEXT */
+.text-muted {
+  color: #a1a1aa;
+}
+
+.text-accent {
+  color: #ff7a00;
+}
+
+/* LIVE STATUS DOT */
+.live-dot {
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 999px;
+
+  background: #ff7a00;
+
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+
+  0% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+
+  100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+}
+
+/* INPUTS */
+input,
+textarea,
+select {
+
+  background: #111111;
+
+  border: 1px solid rgba(255,255,255,0.05);
+
+  color: white;
+
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+
+  outline: none;
+
+  border-color: rgba(255,122,0,0.22);
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+
+  background: #ff7a00;
+
+  border-radius: 999px;
+}
