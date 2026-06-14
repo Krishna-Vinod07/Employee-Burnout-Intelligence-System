@@ -45,7 +45,7 @@ const RecoveryInsights = () => {
       // FETCH MOOD DATA
       const moodResponse = await fetch(
 
-        `http://127.0.0.1:5000/api/mood/${user.id}`
+        `${import.meta.env.VITE_API_URL}/api/mood/${user.id}`
 
       )
 
@@ -54,7 +54,7 @@ const RecoveryInsights = () => {
       // FETCH ACTIVITY DATA
       const activityResponse = await fetch(
 
-        `http://127.0.0.1:5000/api/activity/${user.id}`
+        `${import.meta.env.VITE_API_URL}/api/activity/${user.id}`
 
       )
 

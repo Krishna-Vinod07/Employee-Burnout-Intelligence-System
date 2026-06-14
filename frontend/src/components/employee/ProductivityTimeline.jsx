@@ -37,7 +37,7 @@ const ProductivityTimeline = () => {
     try {
 
       const response = await fetch(
-        `http://127.0.0.1:5000/api/mood/${user.id}`
+        `${import.meta.env.VITE_API_URL}/api/mood/${user.id}`
       )
 
       const data = await response.json()

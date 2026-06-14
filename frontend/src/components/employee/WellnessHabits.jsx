@@ -41,21 +41,21 @@ useEffect(() => {
   try {
 
     const moodResponse = await fetch(
-      `http://127.0.0.1:5000/api/mood/${user.id}`
+      `${import.meta.env.VITE_API_URL}/api/mood/${user.id}`
     )
 
     const moodData =
       await moodResponse.json()
 
     const activityResponse = await fetch(
-      `http://127.0.0.1:5000/api/activity/${user.id}`
+      `${import.meta.env.VITE_API_URL}/api/activity/${user.id}`
     )
 
     const activityData =
       await activityResponse.json()
 
     const analyticsResponse = await fetch(
-      `http://127.0.0.1:5000/api/analytics/employee/${user.id}`
+      `${import.meta.env.VITE_API_URL}/api/analytics/employee/${user.id}`
     )
 
     const analyticsData =

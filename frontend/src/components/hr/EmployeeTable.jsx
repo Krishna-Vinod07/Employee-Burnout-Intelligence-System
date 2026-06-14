@@ -18,7 +18,7 @@ const EmployeeTable = () => {
 
         const response = await fetch(
 
-  'http://127.0.0.1:5000/api/hr/employees'
+  `${import.meta.env.VITE_API_URL}/api/hr/employees`
 
 )
 

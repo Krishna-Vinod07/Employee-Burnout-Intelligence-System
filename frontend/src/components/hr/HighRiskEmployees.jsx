@@ -30,7 +30,7 @@ const HighRiskEmployees = () => {
 
       const response = await fetch(
 
-        'http://127.0.0.1:5000/api/hr/high-risk'
+        `${import.meta.env.VITE_API_URL}/api/hr/high-risk`
 
       )
 

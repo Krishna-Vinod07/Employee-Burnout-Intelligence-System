@@ -27,14 +27,14 @@ const Reports = () => {
     try {
 
       const workforceResponse = await fetch(
-        'http://127.0.0.1:5000/api/hr/workforce-report'
+        `${import.meta.env.VITE_API_URL}/api/hr/workforce-report`
       )
 
       const workforceData =
         await workforceResponse.json()
 
       const forecastResponse = await fetch(
-        'http://127.0.0.1:5000/api/hr/forecast'
+        `${import.meta.env.VITE_API_URL}/api/hr/forecast`
       )
 
       const forecastData =

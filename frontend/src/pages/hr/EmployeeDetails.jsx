@@ -29,7 +29,7 @@ const EmployeeDetails = () => {
 
       const response = await fetch(
 
-        `http://127.0.0.1:5000/api/hr/employee/${id}`
+        `${import.meta.env.VITE_API_URL}/api/hr/employee/${id}`
 
       )
 
@@ -53,7 +53,7 @@ const EmployeeDetails = () => {
 
       const analyticsResponse = await fetch(
 
-        `http://127.0.0.1:5000/api/analytics/employee/${id}`
+        `${import.meta.env.VITE_API_URL}/api/analytics/employee/${id}`
 
       )
 

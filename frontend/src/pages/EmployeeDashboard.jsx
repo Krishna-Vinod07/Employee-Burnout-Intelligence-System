@@ -42,7 +42,7 @@ const EmployeeDashboard = () => {
       // FETCH ANALYTICS
       const analyticsResponse = await fetch(
 
-        `http://127.0.0.1:5000/api/analytics/employee/${user.id}`
+        `${import.meta.env.VITE_API_URL}/api/analytics/employee/${user.id}`
 
       )
 
@@ -61,7 +61,7 @@ const EmployeeDashboard = () => {
       // FETCH LATEST MOOD
 const response = await fetch(
 
-  `http://127.0.0.1:5000/api/mood/latest/${user.id}`
+  `${import.meta.env.VITE_API_URL}/api/mood/latest/${user.id}`
 
 )
 

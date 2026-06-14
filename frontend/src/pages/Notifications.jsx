@@ -57,7 +57,7 @@ const Notifications = () => {
       // SETTINGS
       const settingsResponse = await fetch(
 
-        `http://127.0.0.1:5000/api/settings/${user.id}`
+        `${import.meta.env.VITE_API_URL}/api/settings/${user.id}`
 
       )
 
@@ -67,7 +67,7 @@ const Notifications = () => {
       // ANALYTICS
       const analyticsResponse = await fetch(
 
-        `http://127.0.0.1:5000/api/analytics/employee/${user.id}`
+        `${import.meta.env.VITE_API_URL}/api/analytics/employee/${user.id}`
 
       )
 
@@ -77,7 +77,7 @@ const Notifications = () => {
       // MOOD
       const moodResponse = await fetch(
 
-        `http://127.0.0.1:5000/api/mood/latest/${user.id}`
+        `${import.meta.env.VITE_API_URL}/api/mood/latest/${user.id}`
 
       )
 
@@ -87,7 +87,7 @@ const Notifications = () => {
       // ACTIVITY
       const activityResponse = await fetch(
 
-        `http://127.0.0.1:5000/api/activity/${user.id}`
+        `${import.meta.env.VITE_API_URL}/api/activity/${user.id}`
 
       )
 
